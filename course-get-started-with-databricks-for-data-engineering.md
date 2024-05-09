@@ -27,12 +27,9 @@ Note - COPY_INTO will only add new files if it runs again. If run again not, it 
 ## Clone our bronze table
 
     Lets create a deep clone of our bronze table. Deep clone is an independent copy of our table for cleaning the data.
-       ```
-        ~~~sql
+    
         CREATE TABLE IF NOT EXISTS customer_silver
             DEEP CLONE customers_bronze;
         SELECT * FROM customers_silver;
-        ~~~
-      ```
 
     Deep clone will override all the data in customers_silver table. Instead of that lets merge so that it can add only neew records.

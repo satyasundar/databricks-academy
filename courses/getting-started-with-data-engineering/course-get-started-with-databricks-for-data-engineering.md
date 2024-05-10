@@ -38,7 +38,7 @@ Note - COPY_INTO will only add new files if it runs again. If run again not, it 
 ## Clone our bronze table
 
     Lets create a deep clone of our bronze table. Deep clone is an independent copy of our table for cleaning the data.
-    
+
         CREATE TABLE IF NOT EXISTS customer_silver
             DEEP CLONE customers_bronze;
 
@@ -101,5 +101,13 @@ Note - COPY_INTO will only add new files if it runs again. If run again not, it 
             - DA.validate_job_v1_config()
 
         - For scheduling the jobs
-            - Schedules & Triggers -> Add Trigger -> "Trigger Type = None(manula) -> Scheduled" -> This will open up an UI for cron job
+            - workflows -> Jobs -> Schedules & Triggers -> Add Trigger -> "Trigger Type = None(manula) -> Scheduled" -> This will open up an UI for cron job
 
+## Databricks SQL
+
+    - New -> Query
+    - Select warehouse
+    - select catalog and schema name
+    - Run a query
+    - add visualisation
+    - add to dashboard
